@@ -48,6 +48,12 @@ public class GameTest {
         assertEquals(20, g.score());
     }
 
+    @Test
+    public void perfectGame() {
+        rollMany(12,10);
+        assertEquals(300,g.score());
+    }
+
     private void rollStrike() {
         g.roll(10);
     }
