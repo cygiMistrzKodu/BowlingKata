@@ -36,6 +36,20 @@ public class GameTest {
 
     }
 
+    @Test
+    public void spare() {
+        rollSpare();
+        g.roll(7);
+        rollMany(17,0);
+
+        assertEquals(24,g.score());
+
+    }
+
+    private void rollSpare() {
+        rollMany(2,5);
+    }
+
 }
 
 
